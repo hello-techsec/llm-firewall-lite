@@ -78,5 +78,20 @@ Policies are intentionally simple and readable.
 - Detectors are minimal and should be replaced with stronger methods in real systems.
 - The demo RAG pipeline uses mocked documents.
 
+## Threat Model
+
+### In Scope
+- Prompt injection
+- Sensitive data leakage
+- Topic misuse
+
+### Out of Scope
+- Model poisoning
+- Training-time attacks
+
+### Alignment
+- OWASP LLM Top 10
+
+
 ## License
 MIT
