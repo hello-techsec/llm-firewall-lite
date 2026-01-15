@@ -1,0 +1,11 @@
+name: jailbreak
+rules:
+  - id: JB_IGNORE_INSTRUCTIONS
+    description: "Classic injection phrase"
+    pattern: '(?i)ignore (all|previous) instructions'
+    action: BLOCK
+
+  - id: JB_SYSTEM_PROMPT
+    description: "Attempts to reveal system prompt"
+    pattern: '(?i)(reveal|show|print).*(system prompt|hidden instructions)'
+    action: BLOCK
