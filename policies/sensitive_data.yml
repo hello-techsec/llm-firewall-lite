@@ -1,0 +1,11 @@
+name: sensitive_data
+rules:
+  - id: PII_EMAIL
+    description: Detect emails
+    pattern: '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'
+    action: REDACT
+
+  - id: SECRET_API_KEY_LIKE
+    description: Detect API-key-like tokens (generic)
+    pattern: '\b(sk|api|token|key)[-_]?[A-Za-z0-9]{10,}\b'
+    action: REDACT
