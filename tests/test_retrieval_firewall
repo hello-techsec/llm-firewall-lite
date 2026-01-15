@@ -1,0 +1,8 @@
+from llm_firewall.policy_loader import load_policies
+from llm_firewall.retrieval_firewall import inspect_retrieval
+
+def test_filters_off_topic_chunks():
+    policies = load_policies()
+    chunks = ["best pizza in town", "AI governance and security controls"]
+    res = inspect_retrieval(chunks, policies)
+    assert "best pizza in town" not in res["kept"]
