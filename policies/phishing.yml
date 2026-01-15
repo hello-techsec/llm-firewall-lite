@@ -1,0 +1,6 @@
+name: phishing
+rules:
+  - id: PHISH_PASSWORD
+    description: "Credential harvesting"
+    pattern: '(?i)(password|one-time code|otp|2fa|auth code)'
+    action: BLOCK
