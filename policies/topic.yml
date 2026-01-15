@@ -1,0 +1,7 @@
+name: topic
+allowed_topics:
+  - "ai governance"
+  - "security"
+  - "privacy"
+  - "risk"
+  - "compliance"
