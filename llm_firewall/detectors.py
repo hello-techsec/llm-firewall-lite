@@ -3,13 +3,13 @@ from dataclasses import dataclass
 from typing import List, Dict, Any
 
 @dataclass
-class Finding:
-    policy: str
-    rule_id: str
-    action: str
-    start: int
-    end: int
-    match: str
+class Finding(
+    policy=policy_name,
+    rule_id=rule["id"],
+    action=rule["action"],
+    severity=rule.get("severity", "MEDIUM"),
+    confidence=0.9
+)
 
 def run_regex_rules(text: str, policy: Dict[str, Any]) -> List[Finding]:
     findings: List[Finding] = []
